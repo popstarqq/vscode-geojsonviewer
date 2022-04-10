@@ -1,0 +1,72 @@
+{
+    "name": "vscode-geojsonviewer",
+    "displayName": "GeoJson Viewer for VSCode",
+    "description": "Preview GeoJson file in VSCode",
+    "version": "0.0.1",
+    "publisher": "yangdada",
+    "license": "LICENSE.md",
+    "icon": "icon.png",
+    "bugs": {
+        
+    },
+    "homepage": "https://github.com/popstarqq/vscode-geojsonviewer",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/popstarqq/vscode-geojsonviewer.git"
+    },
+    "galleryBanner": {
+        "color": "#0075c3",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "keywords": [
+        "vscode",
+        "3d",
+        "mesh",
+        "viewer",
+        "webgl",
+        "3ds",
+        "dae",
+        "Collada",
+        "fbx",
+        "obj",
+        "stl"
+    ],
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCustomEditor:geojsonViewer.viewer"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "customEditors": [
+            {
+                "viewType": "geojsonViewer.viewer",
+                "displayName": "GeoJson file Viewer",
+                "selector": [
+                    {
+                        "filenamePattern": "*.geojson"
+                    }
+                ]
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint -p ./",
+        "watch": "tsc -w -p ./"
+    },
+    "devDependencies": {
+        "@types/dat-gui": "^0.6.3",
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^12.20.47",
+        "@types/three": "^0.84.30",
+        "@types/vscode": "^1.45.1",
+        "@types/webgl-ext": "0.0.31",
+        "typescript": "^3.8.3"
+    }
+}
